@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olomoucké karate</title>
+       
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Jednoduché styly pro vzhled stránky */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #000080;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .hero {
+            color: rgb(14, 126, 231);
+            padding: 100px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="podklady/logo olomoucké karate.png" alt="Logo Olomoucké karate">
+    </a>
+    <div class="text">
+      <h1>Olomoucký svaz karate z.s.</h1>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="#" data-section="uvod">Úvod</a>
+  <a href="#" data-section="kluby">Kluby</a>
+  <a href="#" data-section="ke-stazeni">Ke stažení</a>
+  <a href="#" data-section="fotogalerie">Fotogalerie</a>
+  <a href="#" data-section="kontakt">Kontakt</a>
+  <a href="#" data-section="podporuji-nas">Podporují nás</a>
+</nav>
+
+<div class="hero-image"></div>  
+
+<section class="welcome-text">
+  <h2>Vítejte na stránkách Olomouckého svazu karate</h2>
+</section>
+
+<main>
+    <section id="uvod" style="display: none;">
+        <h2>O nás</h2>
+        <p>Olomoucký svaz karate z.s. vznikl v roce 2015 a združuje kluby karate v Olomouckém kraji, které rovněž spadají pod Český svaz karate.</p>
+        <h3> Předseda svazu je PaedDr. Michal Hrubý PhD</h3>
+        <img src="podklady/michal-hruby.avif" alt="PaedDr. Michal Hrubý PhD" style="max-width: 200px; height: auto; display: block; margin-top: 15px;">
+        <h3> Trenérsko-metodickou komisy OSKe vede Miroslav Sobek</h3>
+        <img src="podklady/miro-sobek.jpg" alt="Miroslav Sobek" style="max-width: 200px; height: auto; display: block; margin-top: 15px;">
+        <h3>Komisy rozhodčích OSKe zaštiťuje Svatopluk Sekanina</h3>
+        <img src="podklady/svata-sekanina.jpg" alt="Svatopluk Sekanina" style="max-width: 200px; height: auto; display: block; margin-top: 15px;">
+        <h3>Sportovně-technickou komisy OSKe má na starosti Katarína Dopitová Sámelová</h3>
+        <img src="podklady/ja.jpg" alt="Katarína Dopitová Sámelová" style="max-width: 200px; height: auto; display: block; margin-top: 15px;">
+    </section>
+
+    <section id="kluby" style="display: none;">
+    <h2>Kluby</h2>
+    <h3>Zařazené kluby pod Olomoucký svaz karate.</h3>
+
+    <ul>
+        <li><a href="https://www.vipsportclub.cz" target="_blank">VIP Sport Club Olomouc</a></li>
+        <li><a href="https://www.facebook.com/karateklubjesenik/?locale=cs_CZ" target="_blank">Karate klub Jeseník</a></li>
+        <li><a href="https://www.skkarateolomouc.cz" target="_blank">SK karate Olomouc</a></li>
+        <li><a href="https://www.karatekarvina.cz" target="_blank">Karate klub Karviná</a></li>
+        <li><a href="https://www.tj-prostejov.cz" target="_blank">TJ karate Prostějov</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100064395231166&locale=pt_PT" target="_blank">Bushi-ryu Karate Do Hranice</a></li>
+    </ul>
+</section>
+
+    <section id="clenstvi" style="display: none;">
+        <h2>Členství</h2>
+        <p>Jak se stát členem, přihláška, příspěvky atd.</p>
+    </section>
+
+    <section id="fotogalerie" style="display: none;">
+        <h2>Fotogalerie</h2>
+        <p>Odkazy na fotky z akcí a soutěží, možnost vložení galerie.</p>
+    </section>
+
+    <section id="kontakt" style="display: none;">
+          <h2>Kontakt</h2>
+          <p>IČO: 04416732</p>
+          <p>Datová schránka: w9knc9k</p>
+          <p>Sídlo: Wellnerova 1322/3c, 779 00  Olomouc</p>
+          <h3>Napište nám</h3>
+      <form id="kontakt-form" action="odeslat.php" method="post">
+          <label for="zprava">Stručná zpráva:</label>
+          <textarea id="zprava" name="zprava" rows="4" required></textarea>
+
+          <label for="kontakt">Váš kontakt (e-mail nebo telefon):</label>
+          <input type="text" id="kontakt" name="kontakt" required>
+
+        <button type="submit">Odeslat</button>
+      </form>
+    </section>
+
+    <section id="podporuji-nas" style="display: none;">
+        <h2>Podporují nás</h2>
+
+       <div class="partner-logos">
+       <a href="https://www.olomoucky-kraj.cz" target="_blank" rel="noopener noreferrer">
+          <img src="podklady/logo olomoucký kraj.jpg" alt="Logo Olomoucký kraj">
+       </a>
+
+       <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="podklady/logo nsa.png" alt="Logo NSA">
+       </a>
+
+       <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="podklady/logo Olomouc.jpg" alt="Logo města Olomouc">
+       </a>
+
+       <a href="#" target="_blank" rel="noopener noreferrer">
+         <img src="podklady/logo prostějov.gif" alt="Logo města Prostějov">
+       </a>
+
+       <a href="#" target="_blank" rel="noopener noreferrer">
+         <img src="podklady/logo-cskgr-web.png" alt="Podporující organizace">
+       </a>
+
+       <a href="#" target="_blank" rel="noopener noreferrer">
+         <img src="podklady/logo.jpg" alt="Podporující organizace">
+       </a>
+     </div>
+    </section>
+</main>
+
+
+<footer>
+    <p>&copy; 2025 Olomoucké karate | Všechna práva vyhrazena</p>
+</footer>
+
+<script>
+  const menuLinks = document.querySelectorAll('nav a');
+  const sections = document.querySelectorAll('main section');
+  const hero = document.querySelector('.hero-image'); // změna – třída odpovídá <div class="hero-image">
+  const welcomeText = document.querySelector('.welcome-text'); // nový řádek
+
+  // Schovej všechny sekce na začátku
+  window.addEventListener('DOMContentLoaded', () => {
+    sections.forEach(section => {
+      section.style.display = 'none';
+    });
+    hero.style.display = 'block';
+    welcomeText.style.display = 'block'; // zobrazí Vítejte na úvodní stránce
+  });
+
+  // Přepínání sekcí po kliknutí v menu
+  menuLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('data-section');
+
+      sections.forEach(section => {
+        section.style.display = section.id === targetId ? 'block' : 'none';
+      });
+
+      // Zobraz fotku a Vítejte jen na "Domů"
+      if (targetId === 'uvod') {
+        hero.style.display = 'block';
+        welcomeText.style.display = 'block';
+      } else {
+        hero.style.display = 'none';
+        welcomeText.style.display = 'none';
+      }
+    });
+  });
+
+  document.getElementById('kontakt-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Zabrání reloadu
+
+    alert('Děkujeme za zprávu! Ozveme se co nejdříve.');
+
+    this.reset(); // Vyprázdní formulář
+  });
+</script>
+
+</body>
+</html>

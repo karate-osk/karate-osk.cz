@@ -1,0 +1,35 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Získání dat z formuláře
+    $zprava = trim($_POST['zprava']);
+    $kontakt = trim($_POST['kontakt']);
+
+    // Kontrola, zda jsou data vyplněna
+    if (empty($zprava) || empty($kontakt)) {
+        echo "Prosím vyplňte všechny požadované údaje.";
+        exit;
+    }
+
+    // Nastavení příjemce a předmětu
+    $to = "dopitova.katarina@seznam.cz";
+    $subject = "Nová zpráva z kontaktního formuláře";
+
+    // Tělo zprávy
+    $message = "Byla přijata nová zpráva:\n\n";
+    $message .= "Zpráva:\n" . $zprava . "\n\n";
+    $message .= "Kontakt odesílatele: " . $kontakt . "\n";
+
+    // Hlavičky e-mailu (doporučeno, aby mail neměl problémy)
+    $headers = "From: webmaster@tva-stranka.cz\r\n";
+    $headers .= "Reply-To: " . $kontakt . "\r\n";
+
+    // Odeslání e-mailu
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Děkujeme za zprávu! Ozveme se co nejdříve.";
+    } else {
+        echo "Nastala chyba při odesílání zprávy. Zkuste to prosím znovu.";
+    }
+} else {
+    echo "Neplatná žádost.";
+}
+?>
