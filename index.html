@@ -132,21 +132,28 @@
     </section>
 
     <section id="kontakt" style="display: none;">
-          <h2>Kontakt</h2>
-          <p>IČO: 04416732</p>
-          <p>Datová schránka: w9knc9k</p>
-          <p>Sídlo: Wellnerova 1322/3c, 779 00  Olomouc</p>
-          <h3>Napište nám</h3>
-      <form id="kontakt-form" action="odeslat.php" method="post">
-          <label for="zprava">Stručná zpráva:</label>
-          <textarea id="zprava" name="zprava" rows="4" required></textarea>
+      <h2>Kontakt</h2>
+      <p>IČO: 04416732</p>
+      <p>Datová schránka: w9knc9k</p>
+      <p>Sídlo: Wellnerova 1322/3c, 779 00 Olomouc</p>
+      <h3>Napište nám</h3>
 
-          <label for="kontakt">Váš kontakt (e-mail nebo telefon):</label>
-          <input type="text" id="kontakt" name="kontakt" required>
+       <form id="kontakt-form" action="https://formspree.io/f/xyzrbnyo" method="POST">
+         <label for="zprava">Stručná zpráva:</label>
+         <textarea id="zprava" name="message" rows="4" required></textarea>
 
-        <button type="submit">Odeslat</button>
+         <label for="kontakt">Váš kontakt (e-mail nebo telefon):</label>
+         <input type="text" id="kontakt" name="email" required>
+
+       <button type="submit">Odeslat</button>
       </form>
     </section>
+
+<script>
+  document.getElementById('kontakt-form').addEventListener('submit', function(e) {
+    alert('Děkujeme za zprávu! Ozveme se co nejdříve.');
+  });
+</script>
 
     <section id="podporuji-nas" style="display: none;">
         <h2>Podporují nás</h2>
