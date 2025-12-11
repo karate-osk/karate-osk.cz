@@ -91,7 +91,7 @@ nav a:hover {
 
 /* Hrdinská sekce */
 .hero-image {
-  background: url('podklady/sledujte nas.jpg') center/cover no-repeat;
+  background: url('sledujte nas.jpg') center/cover no-repeat;
   height: 100vh;  /* výška na celou obrazovku */
   position: relative;
 }
